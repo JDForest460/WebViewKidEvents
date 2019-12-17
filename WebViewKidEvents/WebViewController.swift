@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Alamofire
 class WebViewController: UIViewController {
     @IBOutlet weak var MainWebview: WKWebView!
     @IBOutlet weak var saveName: UITextField!
@@ -21,7 +22,18 @@ class WebViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func doSave(_ sender: Any) {
-        print(saveName.text!)
+        
+        
+        let currenturl = (MainWebview.url?.absoluteString)!
+        var apiurl = "http://localhost:8080/tomcatserver1/saveurl?savetitle="
+        apiurl.append(saveName.text!)
+        apiurl.append("&saveurl=")
+        apiurl.append(currenturl)
+        apiurl.append("&saveuserid=1")
+        //print(apiurl)
+        AF.request(apiurl).response { response in
+            debugPrint(response)
+        }
     }
     
 

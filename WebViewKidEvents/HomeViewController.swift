@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var FindStorytimeButton: UIButton!
     @IBOutlet weak var FindPlaygroundButton: UIButton!
+    @IBOutlet weak var RandoomButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +31,18 @@ class HomeViewController: UIViewController {
     @IBAction func doFindZoo(_ sender: Any) {
         performSegue(withIdentifier: "findzoosegue", sender: "findzoosegue")
     }
+    @IBAction func doRandoom(_ sender: Any) {
+        let number = Int.random(in: 0 ..< 4)
+        var randomidentifier: String
+        if(number == 0){ randomidentifier = "findstorytimesegue"}
+        else if(number == 1){randomidentifier = "findplaygroundsegue"}
+        else if(number == 2){randomidentifier = "findtoystoresegue"}
+        else{randomidentifier = "findzoosegue"}
+        performSegue(withIdentifier: randomidentifier, sender: randomidentifier)
+        
+    }
+    
+    
     
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
           if segue.identifier == "findstorytimesegue"{
@@ -44,7 +57,8 @@ class HomeViewController: UIViewController {
         }
         if segue.identifier == "findtoystoresegue"{
             if let VC = segue.destination as? WebViewController{
-                VC.url = "https://www.google.com/maps/search/toy+store"
+               // VC.url = "https://www.google.com/maps/search/toy+store"
+               VC.url = "https://venus.cs.qc.cuny.edu/~liji6333/cs355/"
             }
         }
         if segue.identifier == "findzoosegue"{

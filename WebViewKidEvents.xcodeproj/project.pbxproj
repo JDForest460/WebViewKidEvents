@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50118B523A81D13003ECBD4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B423A81D13003ECBD4 /* UsersModel.swift */; };
+		B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B623A82E58003ECBD4 /* SavedViewController.swift */; };
+		B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118BA23A8520C003ECBD4 /* SavedCell.swift */; };
 		B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92D239EEC2400EC836C /* AppDelegate.swift */; };
 		B5E3A930239EEC2400EC836C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92F239EEC2400EC836C /* SceneDelegate.swift */; };
 		B5E3A935239EEC2400EC836C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E3A933239EEC2400EC836C /* Main.storyboard */; };
@@ -14,9 +17,15 @@
 		B5E3A93A239EEC2400EC836C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E3A938239EEC2400EC836C /* LaunchScreen.storyboard */; };
 		B5E3A942239EED2000EC836C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A941239EED2000EC836C /* WebViewController.swift */; };
 		B5E3A946239EF50900EC836C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A945239EF50900EC836C /* HomeViewController.swift */; };
+		B5E3A948239F218600EC836C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A947239F218600EC836C /* testViewController.swift */; };
+		E0787675311804B538A27E17 /* Pods_WebViewKidEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9F1EE53A68F096FA2B8D8 /* Pods_WebViewKidEvents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34A9F1EE53A68F096FA2B8D8 /* Pods_WebViewKidEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewKidEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50118B423A81D13003ECBD4 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		B50118B623A82E58003ECBD4 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		B50118BA23A8520C003ECBD4 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
 		B5E3A92A239EEC2400EC836C /* WebViewKidEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewKidEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E3A92D239EEC2400EC836C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E3A92F239EEC2400EC836C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,9 @@
 		B5E3A93B239EEC2400EC836C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E3A941239EED2000EC836C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B5E3A945239EF50900EC836C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B5E3A947239F218600EC836C /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		C7ED548A89AF8EDF1FE238A0 /* Pods-WebViewKidEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewKidEvents.debug.xcconfig"; path = "Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		D6767A03ABC7AAA7D678C587 /* Pods-WebViewKidEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewKidEvents.release.xcconfig"; path = "Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0787675311804B538A27E17 /* Pods_WebViewKidEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1081EAE2C680B25CDF70A3E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34A9F1EE53A68F096FA2B8D8 /* Pods_WebViewKidEvents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DA1C6744035FE4434FD2440 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7ED548A89AF8EDF1FE238A0 /* Pods-WebViewKidEvents.debug.xcconfig */,
+				D6767A03ABC7AAA7D678C587 /* Pods-WebViewKidEvents.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B5E3A921239EEC2400EC836C = {
 			isa = PBXGroup;
 			children = (
 				B5E3A92C239EEC2400EC836C /* WebViewKidEvents */,
 				B5E3A92B239EEC2400EC836C /* Products */,
+				7DA1C6744035FE4434FD2440 /* Pods */,
+				1081EAE2C680B25CDF70A3E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +98,10 @@
 				B5E3A93B239EEC2400EC836C /* Info.plist */,
 				B5E3A941239EED2000EC836C /* WebViewController.swift */,
 				B5E3A945239EF50900EC836C /* HomeViewController.swift */,
+				B5E3A947239F218600EC836C /* testViewController.swift */,
+				B50118B423A81D13003ECBD4 /* UsersModel.swift */,
+				B50118B623A82E58003ECBD4 /* SavedViewController.swift */,
+				B50118BA23A8520C003ECBD4 /* SavedCell.swift */,
 			);
 			path = WebViewKidEvents;
 			sourceTree = "<group>";
@@ -77,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5E3A93E239EEC2400EC836C /* Build configuration list for PBXNativeTarget "WebViewKidEvents" */;
 			buildPhases = (
+				A22B7736B156B294E43E9213 /* [CP] Check Pods Manifest.lock */,
 				B5E3A926239EEC2400EC836C /* Sources */,
 				B5E3A927239EEC2400EC836C /* Frameworks */,
 				B5E3A928239EEC2400EC836C /* Resources */,
+				0AC0D88078C774B055F8AD53 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AC0D88078C774B055F8AD53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22B7736B156B294E43E9213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebViewKidEvents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5E3A926239EEC2400EC836C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,7 +223,11 @@
 			files = (
 				B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */,
 				B5E3A942239EED2000EC836C /* WebViewController.swift in Sources */,
+				B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */,
+				B50118B523A81D13003ECBD4 /* UsersModel.swift in Sources */,
 				B5E3A930239EEC2400EC836C /* SceneDelegate.swift in Sources */,
+				B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */,
+				B5E3A948239F218600EC836C /* testViewController.swift in Sources */,
 				B5E3A946239EF50900EC836C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +370,11 @@
 		};
 		B5E3A93F239EEC2400EC836C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7ED548A89AF8EDF1FE238A0 /* Pods-WebViewKidEvents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G49T4M8KP2;
 				INFOPLIST_FILE = WebViewKidEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,9 +389,11 @@
 		};
 		B5E3A940239EEC2400EC836C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6767A03ABC7AAA7D678C587 /* Pods-WebViewKidEvents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G49T4M8KP2;
 				INFOPLIST_FILE = WebViewKidEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
