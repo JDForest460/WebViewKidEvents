@@ -1,0 +1,6 @@
+framework module Pods_WebViewKidEvents {
+  umbrella header "Pods-WebViewKidEvents-umbrella.h"
+
+  export *
+  module * { export * }
+}

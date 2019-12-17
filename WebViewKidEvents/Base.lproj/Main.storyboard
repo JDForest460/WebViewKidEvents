@@ -230,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="2046" y="896"/>
         </scene>
-        <!--Item-->
+        <!--Saved-->
         <scene sceneID="6cl-6U-0iS">
             <objects>
                 <viewController id="kQC-Tf-f7k" customClass="SavedViewController" customModule="WebViewKidEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -290,7 +290,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OCw-5P-sXE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3AP-EE-fWa"/>
+                    <tabBarItem key="tabBarItem" title="Saved" id="3AP-EE-fWa"/>
                     <connections>
                         <outlet property="mytableview" destination="e91-tg-ciL" id="t8J-I0-nJr"/>
                     </connections>

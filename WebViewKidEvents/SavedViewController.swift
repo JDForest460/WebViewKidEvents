@@ -22,14 +22,14 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        doapicall()
         
         mytableview.dataSource = self
         mytableview.delegate = self
-    
-        
+
         myRefreshControl.addTarget(self, action: #selector(doapicall), for: .valueChanged)
         mytableview.refreshControl = myRefreshControl
+        
+        doapicall()
         // Do any additional setup after loading the view.
     }
 
