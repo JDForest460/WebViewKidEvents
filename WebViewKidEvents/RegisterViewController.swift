@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
         if(passwordbox.text == confirmbox.text){
             //print("register success")
             //http://localhost:8080/tomcatserver1/register?username=test1&password=p1
-            var apiurl = "http://localhost:8080/tomcatserver1/register?username="
+            var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/register?username="
                    apiurl.append(usernamebox.text!)
                    apiurl.append("&password=")
                    apiurl.append(passwordbox.text!)

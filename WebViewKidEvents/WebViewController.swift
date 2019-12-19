@@ -19,7 +19,13 @@ class WebViewController: UIViewController {
         let myURL = URL(string:url ?? "https://developer.apple.com/documentation/webkit/wkwebview")
         let myRequest = URLRequest(url: myURL!)
         MainWebview.load(myRequest)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     @IBAction func doSave(_ sender: Any) {
         
@@ -27,7 +33,7 @@ class WebViewController: UIViewController {
         let localuserid = defaults.integer(forKey: "userid")
         
         let currenturl = (MainWebview.url?.absoluteString)!
-        var apiurl = "http://localhost:8080/tomcatserver1/saveurl?savetitle="
+        var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/saveurl?savetitle="
         apiurl.append(saveName.text!)
         apiurl.append("&saveurl=")
         apiurl.append(currenturl)

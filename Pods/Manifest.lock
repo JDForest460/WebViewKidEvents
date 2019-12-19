@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - TestFairy (1.21.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
+  - TestFairy
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - TestFairy
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  TestFairy: 8ef7a8dc9081f8c0d1a595610dc1f707127aac75
 
-PODFILE CHECKSUM: d2ac89e6f7b5349e103aea4c9e37cddb439741d8
+PODFILE CHECKSUM: 2d6a5522c7530552cc9459aa4c7c0694a57aa442
 
 COCOAPODS: 1.8.4

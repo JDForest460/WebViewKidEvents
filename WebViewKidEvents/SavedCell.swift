@@ -26,12 +26,13 @@ class SavedCell: UITableViewCell {
         print(userid)
         //http://localhost:8080/tomcatserver1/delete?saveid=39
         
-        var apiurl = "http://localhost:8080/tomcatserver1/delete?saveid="
+        var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/delete?saveid="
         apiurl.append(String(userid))
         //print(apiurl)
         AF.request(apiurl).response { response in
             debugPrint(response)
         }
+       
     }
     
 }

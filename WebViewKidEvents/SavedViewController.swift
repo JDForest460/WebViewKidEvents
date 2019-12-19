@@ -47,9 +47,11 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         return cell
     }
     @objc func doapicall(){
+        
+        //http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id=1
         let defaults = UserDefaults.standard
         let localuserid = defaults.integer(forKey: "userid")
-        var url = "http://localhost:8080/tomcatserver1/usersaved?id="
+        var url = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id="
         url.append(String(localuserid))
                    AF.request(url).responseJSON { response in
                               switch response.result{

@@ -7,4 +7,5 @@ target 'WebViewKidEvents' do
 
   # Pods for WebViewKidEvents
 pod 'Alamofire', '~> 5.0.0-rc.3'
+pod 'TestFairy'
 end
