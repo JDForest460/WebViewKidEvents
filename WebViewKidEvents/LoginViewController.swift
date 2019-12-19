@@ -31,20 +31,25 @@ class LoginViewController: UIViewController {
         AF.request(apiurl).responseJSON { response in
             switch response.result{
             case.success:
-                print(response)
+               // print(response)
                 
                  guard let jsonData = response.data else {
                            print("Unable to get data from response  ")
                            return
                        }
                        do {
-                           let usersData = try JSONDecoder().decode(BackModel.self, from: jsonData)
+                        let usersData = try JSONDecoder().decode(BackModel.self, from: jsonData)
                         //print(usersData.back)
                         self.backtype = usersData.back
                         self.storeid = usersData.id
                         if(self.backtype == "Login success"){
                            // print(usersData.back)
-                            print(self.storeid)
+                           // print(self.storeid)
+                            let defaults = UserDefaults.standard
+                            defaults.set(self.storeid, forKey: "userid")
+                            
+                            
+                            
                             self.performSegue(withIdentifier: "loginsegue", sender:"loginsegue" )
                         }else{
                             //print(usersData.back)

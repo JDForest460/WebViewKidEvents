@@ -23,14 +23,18 @@ class WebViewController: UIViewController {
     }
     @IBAction func doSave(_ sender: Any) {
         
+        let defaults = UserDefaults.standard
+        let localuserid = defaults.integer(forKey: "userid")
         
         let currenturl = (MainWebview.url?.absoluteString)!
         var apiurl = "http://localhost:8080/tomcatserver1/saveurl?savetitle="
         apiurl.append(saveName.text!)
         apiurl.append("&saveurl=")
         apiurl.append(currenturl)
-        apiurl.append("&saveuserid=1")
-        //print(apiurl)
+        apiurl.append("&saveuserid=")
+        apiurl.append(String(localuserid))
+       // print(apiurl)
+        
         AF.request(apiurl).response { response in
             debugPrint(response)
         }
@@ -42,6 +46,7 @@ class WebViewController: UIViewController {
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
+ 
     }
     
 
