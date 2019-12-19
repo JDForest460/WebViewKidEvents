@@ -70,19 +70,19 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
             let usersData = try JSONDecoder().decode(UsersModel.self, from: jsonData)
           
             rowcount = usersData.usersaved.count
-            
+            myid = []
+            mytitle = []
+            myurl = []
 
             for i in 0..<rowcount{
-                
+               
                 myid.append(usersData.usersaved[i].savedid)
                 mytitle.append(usersData.usersaved[i].title)
                 myurl.append( usersData.usersaved[i].url)
                
-               // print(mytitle[i])
-                //print("\"id\" record: \(i), user \"id\": \(myId), \"title\": \(mytitle),\"url\": \(myurl)")
+               
             }
     
-            mytableview.reloadData()
         } catch {
             print("Error: Unable to map jsonData to UsersModel  ")
         }

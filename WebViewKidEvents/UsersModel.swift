@@ -11,7 +11,10 @@ import Foundation
 struct UsersModel: Codable {
     let usersaved: [Usersaved]
 }
-
+struct BackModel: Codable {
+    let back: String
+    let id: Int
+}
 // MARK: - Usersaved
 struct Usersaved: Codable {
     let savedid: Int

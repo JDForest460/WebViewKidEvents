@@ -34,6 +34,14 @@ class WebViewController: UIViewController {
         AF.request(apiurl).response { response in
             debugPrint(response)
         }
+        if(true){
+            let alertController = UIAlertController(title: "", message: "This event is been saved", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: {
+                       action in
+                   })
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
 

@@ -10,6 +10,8 @@
 		B50118B523A81D13003ECBD4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B423A81D13003ECBD4 /* UsersModel.swift */; };
 		B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B623A82E58003ECBD4 /* SavedViewController.swift */; };
 		B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118BA23A8520C003ECBD4 /* SavedCell.swift */; };
+		B597C4AB23ABBF2800FE57BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */; };
+		B597C4AD23ABBF3B00FE57BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */; };
 		B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92D239EEC2400EC836C /* AppDelegate.swift */; };
 		B5E3A930239EEC2400EC836C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92F239EEC2400EC836C /* SceneDelegate.swift */; };
 		B5E3A935239EEC2400EC836C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E3A933239EEC2400EC836C /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		B5E3A93A239EEC2400EC836C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E3A938239EEC2400EC836C /* LaunchScreen.storyboard */; };
 		B5E3A942239EED2000EC836C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A941239EED2000EC836C /* WebViewController.swift */; };
 		B5E3A946239EF50900EC836C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A945239EF50900EC836C /* HomeViewController.swift */; };
-		B5E3A948239F218600EC836C /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A947239F218600EC836C /* testViewController.swift */; };
 		E0787675311804B538A27E17 /* Pods_WebViewKidEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9F1EE53A68F096FA2B8D8 /* Pods_WebViewKidEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 		B50118B423A81D13003ECBD4 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		B50118B623A82E58003ECBD4 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		B50118BA23A8520C003ECBD4 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
+		B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B5E3A92A239EEC2400EC836C /* WebViewKidEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewKidEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E3A92D239EEC2400EC836C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E3A92F239EEC2400EC836C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		B5E3A93B239EEC2400EC836C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E3A941239EED2000EC836C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B5E3A945239EF50900EC836C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B5E3A947239F218600EC836C /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		C7ED548A89AF8EDF1FE238A0 /* Pods-WebViewKidEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewKidEvents.debug.xcconfig"; path = "Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		D6767A03ABC7AAA7D678C587 /* Pods-WebViewKidEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewKidEvents.release.xcconfig"; path = "Target Support Files/Pods-WebViewKidEvents/Pods-WebViewKidEvents.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,10 +100,11 @@
 				B5E3A93B239EEC2400EC836C /* Info.plist */,
 				B5E3A941239EED2000EC836C /* WebViewController.swift */,
 				B5E3A945239EF50900EC836C /* HomeViewController.swift */,
-				B5E3A947239F218600EC836C /* testViewController.swift */,
 				B50118B423A81D13003ECBD4 /* UsersModel.swift */,
 				B50118B623A82E58003ECBD4 /* SavedViewController.swift */,
 				B50118BA23A8520C003ECBD4 /* SavedCell.swift */,
+				B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */,
+				B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */,
 			);
 			path = WebViewKidEvents;
 			sourceTree = "<group>";
@@ -221,13 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B597C4AB23ABBF2800FE57BE /* LoginViewController.swift in Sources */,
+				B597C4AD23ABBF3B00FE57BE /* RegisterViewController.swift in Sources */,
 				B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */,
 				B5E3A942239EED2000EC836C /* WebViewController.swift in Sources */,
 				B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */,
 				B50118B523A81D13003ECBD4 /* UsersModel.swift in Sources */,
 				B5E3A930239EEC2400EC836C /* SceneDelegate.swift in Sources */,
 				B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */,
-				B5E3A948239F218600EC836C /* testViewController.swift in Sources */,
 				B5E3A946239EF50900EC836C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

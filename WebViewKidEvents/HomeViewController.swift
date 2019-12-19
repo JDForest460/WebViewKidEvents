@@ -58,7 +58,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "findtoystoresegue"{
             if let VC = segue.destination as? WebViewController{
                // VC.url = "https://www.google.com/maps/search/toy+store"
-               VC.url = "https://venus.cs.qc.cuny.edu/~liji6333/cs355/"
+               VC.url = "hhttps://www.google.com/maps/search/toystore"
             }
         }
         if segue.identifier == "findzoosegue"{
