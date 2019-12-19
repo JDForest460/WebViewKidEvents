@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordbox: UITextField!
     @IBOutlet weak var loginbutton: UIButton!
     var backtype = ""
-    var storeid = 0
+    var storeid = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         AF.request(apiurl).responseJSON { response in
             switch response.result{
             case.success:
-               // print(response)
+                print(response)
                 
                  guard let jsonData = response.data else {
                            print("Unable to get data from response  ")
