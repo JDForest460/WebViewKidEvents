@@ -59,14 +59,15 @@ class HomeViewController: UIViewController {
         }
         if segue.identifier == "findtoystoresegue"{
             if let VC = segue.destination as? WebViewController{
-               // VC.url = "https://www.google.com/maps/search/toy+store"
-               VC.url = "https://www.google.com/search?q=zoo"
+                VC.url = "https://www.google.com/maps/search/toy+store"
+              // VC.url = "https://www.google.com/search?q=zoo"
             }
         }
         if segue.identifier == "findzoosegue"{
             if let VC = segue.destination as? WebViewController{
                 //VC.url = "https://www.google.com/maps/search/zoo"
-                  VC.url = "https://www.google.com/search?q=zoo"
+                //  VC.url = "https://www.google.com/search?q=zoo"
+                VC.url = "https://www.amnh.org/learn-teach/children-and-families"
             }
         }
       }

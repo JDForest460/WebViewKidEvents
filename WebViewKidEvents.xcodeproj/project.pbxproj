@@ -11,6 +11,7 @@
 		B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B623A82E58003ECBD4 /* SavedViewController.swift */; };
 		B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118BA23A8520C003ECBD4 /* SavedCell.swift */; };
 		B54AE20723AC8098009CB2ED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54AE20623AC8098009CB2ED /* WebKit.framework */; };
+		B54AE20923AD1FF8009CB2ED /* SavedwebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AE20823AD1FF8009CB2ED /* SavedwebViewController.swift */; };
 		B597C4AB23ABBF2800FE57BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */; };
 		B597C4AD23ABBF3B00FE57BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */; };
 		B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92D239EEC2400EC836C /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		B50118B623A82E58003ECBD4 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		B50118BA23A8520C003ECBD4 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
 		B54AE20623AC8098009CB2ED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B54AE20823AD1FF8009CB2ED /* SavedwebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedwebViewController.swift; sourceTree = "<group>"; };
 		B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B5E3A92A239EEC2400EC836C /* WebViewKidEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewKidEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				B50118BA23A8520C003ECBD4 /* SavedCell.swift */,
 				B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */,
 				B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */,
+				B54AE20823AD1FF8009CB2ED /* SavedwebViewController.swift */,
 			);
 			path = WebViewKidEvents;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B597C4AB23ABBF2800FE57BE /* LoginViewController.swift in Sources */,
+				B54AE20923AD1FF8009CB2ED /* SavedwebViewController.swift in Sources */,
 				B597C4AD23ABBF3B00FE57BE /* RegisterViewController.swift in Sources */,
 				B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */,
 				B5E3A942239EED2000EC836C /* WebViewController.swift in Sources */,

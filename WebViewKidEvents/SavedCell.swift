@@ -8,15 +8,21 @@
 
 import UIKit
 import Alamofire
+protocol MyCustomCellDelegator {
+    func callSegueFromCell(myData: String)
+}
 class SavedCell: UITableViewCell {
     @IBOutlet weak var titlelabel: UILabel!
     @IBOutlet weak var urllabel: UILabel!
+    @IBOutlet weak var detailbutton: UIButton!
+    
     var userid = 0
+    var delagete: MyCustomCellDelegator?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+ 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -33,6 +39,11 @@ class SavedCell: UITableViewCell {
             debugPrint(response)
         }
        
+    }
+    @IBAction func dodetail(_ sender: Any) {
+        
+        self.delagete!.callSegueFromCell(myData: "good")
+        
     }
     
 }

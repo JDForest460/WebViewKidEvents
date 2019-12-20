@@ -57,9 +57,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Por-Lo-xws">
-                                <rect key="frame" x="150" y="485" width="114" height="48"/>
+                                <rect key="frame" x="119.5" y="485" width="175" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Find Zoo"/>
+                                <state key="normal" title="Find Museum"/>
                                 <connections>
                                     <action selector="doFindZoo:" destination="52j-tS-bFB" eventType="touchUpInside" id="XWM-wG-6pR"/>
                                 </connections>
@@ -196,7 +196,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ws-fw-pNR">
                                 <rect key="frame" x="20" y="544" width="374" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAC-yj-Ndz">
                                 <rect key="frame" x="20" y="368" width="146" height="36"/>
@@ -274,12 +274,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNZ-zC-ZZE">
                                 <rect key="frame" x="20" y="550" width="374" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pco-uN-YlH">
                                 <rect key="frame" x="20" y="451" width="374" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-O5-3NJ">
                                 <rect key="frame" x="20" y="312" width="122" height="30"/>
@@ -362,6 +362,41 @@
             </objects>
             <point key="canvasLocation" x="2884.057971014493" y="125.89285714285714"/>
         </scene>
+        <!--Savedweb View Controller-->
+        <scene sceneID="d6Y-Ge-b6e">
+            <objects>
+                <viewController id="wdt-uv-dkk" customClass="SavedwebViewController" customModule="WebViewKidEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Au-MV-kXz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-IM-XbC">
+                                <rect key="frame" x="20" y="108" width="374" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EJu-IM-XbC" firstAttribute="top" secondItem="3HF-6g-gfl" secondAttribute="top" constant="20" id="5Iy-Xn-zfc"/>
+                            <constraint firstItem="EJu-IM-XbC" firstAttribute="leading" secondItem="3HF-6g-gfl" secondAttribute="leading" constant="20" id="7MV-Yo-tso"/>
+                            <constraint firstItem="EJu-IM-XbC" firstAttribute="bottom" secondItem="3HF-6g-gfl" secondAttribute="bottom" constant="20" id="97W-fZ-LC9"/>
+                            <constraint firstItem="3HF-6g-gfl" firstAttribute="trailing" secondItem="EJu-IM-XbC" secondAttribute="trailing" constant="20" id="K8f-C2-lpQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3HF-6g-gfl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hTN-VL-kCG"/>
+                    <connections>
+                        <outlet property="webbox" destination="EJu-IM-XbC" id="fDt-jg-qKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNC-BD-SZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2356.521739130435" y="907.36607142857133"/>
+        </scene>
         <!--Saved-->
         <scene sceneID="6cl-6U-0iS">
             <objects>
@@ -397,9 +432,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKV-bf-dLm">
-                                                    <rect key="frame" x="259" y="5" width="62" height="30"/>
+                                                    <rect key="frame" x="270" y="5" width="40" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="reminder"/>
+                                                    <state key="normal" title="Detail"/>
+                                                    <connections>
+                                                        <action selector="dodetail:" destination="m8G-Mz-XIg" eventType="touchUpInside" id="d5o-W8-RjZ"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewG-9B-0Cs">
                                                     <rect key="frame" x="329" y="5" width="45" height="30"/>
@@ -412,6 +450,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="detailbutton" destination="gKV-bf-dLm" id="21Y-Cq-HQC"/>
                                             <outlet property="titlelabel" destination="eLm-6a-mud" id="pRa-3i-Ugv"/>
                                             <outlet property="urllabel" destination="CyH-6P-SYF" id="ut7-Ka-06q"/>
                                         </connections>
@@ -425,11 +464,12 @@
                     <tabBarItem key="tabBarItem" title="Saved" id="3AP-EE-fWa"/>
                     <connections>
                         <outlet property="mytableview" destination="e91-tg-ciL" id="t8J-I0-nJr"/>
+                        <segue destination="wdt-uv-dkk" kind="show" identifier="savedwebsegue" id="vtI-6e-ckj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5l-bB-j9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="895.98214285714278"/>
+            <point key="canvasLocation" x="4286.9565217391309" y="895.98214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q0H-5Z-IKJ">

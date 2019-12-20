@@ -8,7 +8,12 @@
 
 import UIKit
 import Alamofire
-class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,MyCustomCellDelegator {
+    func callSegueFromCell(myData: String) {
+        print("detail")
+        self.performSegue(withIdentifier: "savedwebsegue", sender:"savedwebsegue" )
+    }
+    
     
     
     @IBOutlet weak var mytableview: UITableView!
@@ -43,9 +48,11 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         cell.userid = myid[indexPath.row]
         cell.titlelabel.text = "Title: " + mytitle[indexPath.row]
         cell.urllabel.text = "Url: " + myurl[indexPath.row]
-        
+        cell.delagete = self as! MyCustomCellDelegator
         return cell
     }
+
+
     @objc func doapicall(){
         
         //http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id=1
@@ -57,13 +64,14 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
                               switch response.result{
                               case.success:
                                   self.extractUserData(jsonResponse: response)
+                                  self.mytableview.reloadData()
+                                  self.myRefreshControl.endRefreshing()
                               case.failure(let error):
                                   print(error)
                               }
                           }
        
-        self.mytableview.reloadData()
-        self.myRefreshControl.endRefreshing()
+       
         
     }
     func extractUserData(jsonResponse: AFDataResponse<Any>) {
@@ -93,7 +101,11 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
     
     }
-
+    override func prepare(for segue:UIStoryboardSegue,sender:Any?){
+        if let VC = segue.destination as? SavedwebViewController{
+        VC.url = "https://www.nypl.org/events/calendar?keyword=storytime"
+        }
+    }
     /*
     // MARK: - Navigation
 
