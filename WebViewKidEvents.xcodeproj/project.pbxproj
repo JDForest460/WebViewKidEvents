@@ -10,6 +10,7 @@
 		B50118B523A81D13003ECBD4 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B423A81D13003ECBD4 /* UsersModel.swift */; };
 		B50118B723A82E58003ECBD4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118B623A82E58003ECBD4 /* SavedViewController.swift */; };
 		B50118BB23A8520C003ECBD4 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50118BA23A8520C003ECBD4 /* SavedCell.swift */; };
+		B54AE20723AC8098009CB2ED /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54AE20623AC8098009CB2ED /* WebKit.framework */; };
 		B597C4AB23ABBF2800FE57BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */; };
 		B597C4AD23ABBF3B00FE57BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */; };
 		B5E3A92E239EEC2400EC836C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3A92D239EEC2400EC836C /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		B50118B423A81D13003ECBD4 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		B50118B623A82E58003ECBD4 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		B50118BA23A8520C003ECBD4 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
+		B54AE20623AC8098009CB2ED /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B597C4AA23ABBF2800FE57BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B597C4AC23ABBF3B00FE57BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B5E3A92A239EEC2400EC836C /* WebViewKidEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewKidEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54AE20723AC8098009CB2ED /* WebKit.framework in Frameworks */,
 				E0787675311804B538A27E17 /* Pods_WebViewKidEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +60,7 @@
 		1081EAE2C680B25CDF70A3E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B54AE20623AC8098009CB2ED /* WebKit.framework */,
 				34A9F1EE53A68F096FA2B8D8 /* Pods_WebViewKidEvents.framework */,
 			);
 			name = Frameworks;
@@ -326,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -396,13 +400,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G49T4M8KP2;
+				DEVELOPMENT_TEAM = X4M2CSN4NP;
 				INFOPLIST_FILE = WebViewKidEvents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WebViewKidEvents;
+				PRODUCT_BUNDLE_IDENTIFIER = webkidevents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,13 +420,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G49T4M8KP2;
+				DEVELOPMENT_TEAM = X4M2CSN4NP;
 				INFOPLIST_FILE = WebViewKidEvents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WebViewKidEvents;
+				PRODUCT_BUNDLE_IDENTIFIER = webkidevents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

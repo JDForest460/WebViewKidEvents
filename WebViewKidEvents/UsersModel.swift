@@ -15,6 +15,9 @@ struct BackModel: Codable {
     let back: String
     let id: String
 }
+struct registBackModel: Codable {
+    let back: String
+}
 // MARK: - Usersaved
 struct Usersaved: Codable {
     let savedid: Int
