@@ -28,7 +28,9 @@ class LoginViewController: UIViewController {
     }
     @IBAction func dologin(_ sender: Any) {
         //http://localhost:8080/tomcatserver1/login?username=test2&password=p2
-        var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/login?username="
+       // var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/login?username="
+       var apiurl = "http://localhost:8080/tomcatserver1/login?username="
+       
         apiurl.append(usernamebox.text!)
         apiurl.append("&password=")
         apiurl.append(passwordbox.text!)

@@ -10,14 +10,29 @@ import UIKit
 import Alamofire
 class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,MyCustomCellDelegator {
     func callSegueFromCell(myData: String) {
-        print("detail")
+        senturl = myData
+       // print(myData)
         self.performSegue(withIdentifier: "savedwebsegue", sender:"savedwebsegue" )
+    }
+    func callDeleteFromCell() {
+       // print("delete")
+        let alertController = UIAlertController(title: "", message: "This event is been deleted", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: {
+                   action in
+               })
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+        doapicall()
     }
     
     
+    @IBAction func searchbutton(_ sender: Any) {
+    }
     
     @IBOutlet weak var mytableview: UITableView!
-    
+    var senturl = "url"
     var rowcount = 0
     var myid:[Int] = []
     var mytitle:[String] = []
@@ -48,6 +63,7 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         cell.userid = myid[indexPath.row]
         cell.titlelabel.text = "Title: " + mytitle[indexPath.row]
         cell.urllabel.text = "Url: " + myurl[indexPath.row]
+        cell.cellurl = myurl[indexPath.row]
         cell.delagete = self as! MyCustomCellDelegator
         return cell
     }
@@ -58,7 +74,9 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         //http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id=1
         let defaults = UserDefaults.standard
         let localuserid = defaults.integer(forKey: "userid")
-        var url = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id="
+       // var url = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/usersaved?id="
+        var url = "http://localhost:8080/tomcatserver1/usersaved?id="
+        
         url.append(String(localuserid))
                    AF.request(url).responseJSON { response in
                               switch response.result{
@@ -101,9 +119,13 @@ class SavedViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
     
     }
+    @IBAction func dosearch(_ sender: Any) {
+        
+    }
+    
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
         if let VC = segue.destination as? SavedwebViewController{
-        VC.url = "https://www.nypl.org/events/calendar?keyword=storytime"
+        VC.url = senturl
         }
     }
     /*

@@ -33,7 +33,8 @@ class WebViewController: UIViewController {
         let localuserid = defaults.integer(forKey: "userid")
         
         let currenturl = (MainWebview.url?.absoluteString)!
-        var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/saveurl?savetitle="
+        //var apiurl = "http://ec2-18-188-247-38.us-east-2.compute.amazonaws.com:8080/tomcatserver1/saveurl?savetitle="
+        var apiurl = "http://localhost:8080/tomcatserver1/saveurl?savetitle="
         apiurl.append(saveName.text!)
         apiurl.append("&saveurl=")
         apiurl.append(currenturl)
